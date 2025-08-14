@@ -1,0 +1,14 @@
+EXPORT RECEIPT
+----------------------------------------
+Export ID: EXP018
+Product Name: Suki Cuban
+Export Date: 16-16-2016
+Destination: Cuba
+Quantity: 10
+Unit Price: 30.50
+Total Price: 305.00
+Client Name: Mr Garnacho
+Client Number: 08134483936
+Shipping Method: Air
+----------------------------------------
+

@@ -1,0 +1,28 @@
+CLIENT DETAILS
+
+----------------------------------------
+Client ID: Exp001
+Client Type: Company
+Client Name: Suki Venture
+Client Number: 
+Client Email: suki@gmail.com
+Client Address: 123 Shit street
+City: Abj
+Country: Nigeria
+Postal Code: 009
+----------------------------------------
+
+CLIENT DETAILS
+
+----------------------------------------
+Client ID: Exp 001
+Client Type: Company
+Client Name: Suki ventures
+Client Number: 
+Client Email: suki@gmail.com
+Client Address: 123 Shit Street
+City: Abj
+Country: Nigeria
+Postal Code: 009
+----------------------------------------
+
