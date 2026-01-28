@@ -1,3 +1,6 @@
+package com.darren.cargotracker;
+
+
 import java.util.Scanner;
 
 public class Main {
