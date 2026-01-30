@@ -55,7 +55,8 @@ public class ExportService {
             try {
                 System.out.print("Enter the Client Phone Number: ");
                 String clientNumber = input.nextLine().trim();
-                validatephoneNumber(clientNumber);
+                Validator validator = new Validator();
+                validator.validatephoneNumber(clientNumber);
                 shipment.setClientNumber(clientNumber);
                 break;
             } catch (IncompleteNumberException e) {
@@ -70,22 +71,10 @@ public class ExportService {
         System.out.println(shipment.toString());
         System.out.printf("Total Value: %.2f%n", shipment.calculateTotal());
         System.out.println("=======================================");
-    }
 
-    //CUSTOM EXCEPTION CLASSES
-    public static class IncompleteNumberException extends Exception {
-
-        public IncompleteNumberException(String message) {
-            super(message);
-        }
-
-    }
-    //METHOD FOR ALL THE CUSTOM EXCEPTION CLASSES
-
-    public void validatephoneNumber(String clientNumber) throws IncompleteNumberException {
-        if (clientNumber == null || clientNumber.length() != 11) {
-            throw new IncompleteNumberException("Phone number is incomplete. It must be 11 digits");
-        }
+        ExportRepository repository = new ExportRepository();
+        repository.saveExport(shipment);
+        System.out.println("Export shipment recorded successfully and saved to repository.");
     }
 
 }

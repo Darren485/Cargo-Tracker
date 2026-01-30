@@ -12,6 +12,9 @@ public class Client {
     private String country;// Country of the client
     private String postalCode;// Postal code of the client
 
+    public Client() {
+    }
+
     public Client(String clientID, String clientType, String clientName, String clientNumber, String clientEmail, String clientAddress, String city, String country, String postalCode) {
         this.clientID = clientID;
         this.clientType = clientType;

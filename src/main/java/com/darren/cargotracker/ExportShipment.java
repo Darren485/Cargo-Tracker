@@ -1,27 +1,43 @@
 package com.darren.cargotracker;
 
+import java.time.LocalDate;
+import com.darren.cargotracker.ShipmentStatus;
+
+
 public class ExportShipment {
 
     private String exportID;
     private String productName;
-    private String exportDate;
+    private LocalDate exportDate;
     private String destination;
     private int quantity;
     private double unitPrice;
     private String clientName;
     private String clientNumber;
     private String shippingmethod;
+    private ShipmentStatus status;
+    public ExportShipment() {
+    }
+
+    
+
+    public ExportShipment(ShipmentStatus status) {
+        this.status = ShipmentStatus.PENDING;
+    }
+
+
 
     public ExportShipment(String exportID, String productName, String exportDate, String destination, int quantity, double unitPrice, String clientName, String clientNumber, String shippingmethod) {
         this.exportID = exportID;
         this.productName = productName;
-        this.exportDate = exportDate;
+        this.exportDate = LocalDate.parse(exportDate);
         this.destination = destination;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
         this.clientName = clientName;
         this.clientNumber = clientNumber;
         this.shippingmethod = shippingmethod;
+        this.status = ShipmentStatus.PENDING;
     }
 
     public String getExportID() {
@@ -40,11 +56,11 @@ public class ExportShipment {
         this.productName = productName;
     }
 
-    public String getExportDate() {
+    public LocalDate getExportDate() {
         return exportDate;
     }
 
-    public void setExportDate(String exportDate) {
+    public void setExportDate(LocalDate exportDate) {
         this.exportDate = exportDate;
     }
 
@@ -108,4 +124,6 @@ public class ExportShipment {
                 + "]";
     }
 
+
+    
 }
